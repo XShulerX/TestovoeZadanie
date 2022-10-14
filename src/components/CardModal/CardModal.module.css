@@ -1,0 +1,58 @@
+.CardModal {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: none;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.CardModalContent {
+    position: relative;
+    padding: 25px;
+    background: white;
+    border-radius: 16px;
+    min-width: 580px;
+}
+
+.CardModal.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.CardModalContent tr td:first-child {
+    font-weight: bold;
+    color: black;
+    width: 40%;
+}
+.CardModalContent td{
+    padding-top:20px;
+}
+.CardModalContent tr:last-child td{
+    padding-bottom:20px;
+}
+.closeButton {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    color: white;
+    background-color: #b44ccf;
+    border-radius: 50px;
+    top: -21px;
+    left: 48%;
+    cursor: pointer;
+}
+
+.nameTitle{
+    color: black;
+}
+.moreInfo{
+    color: black;
+    font-weight: bold;
+}

@@ -1,38 +1,105 @@
-.App {
-  text-align: center;
+* {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #868b8f;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.CardList {
+    width: 1200px;
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.CardItem {
+    width: 370px;
+    height: 300px;
+    box-shadow: 0px 10px 20px 0px rgb(34 60 80 / 23%);
+    border-radius: 30px;
+    font-size: 1.2em;
+
+    margin-top: 15px;
+    cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.CardItem * {
+    margin-left: 30px;
+    margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.CardItem .FIO {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    font-weight: bold;
+    font-size: larger;
+    color: black;
+}
+.CardItem .phone {
+    position: relative;
+    padding-left: 30px;
+}
+.CardItem .phone::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 0px;
+    width: 24px;
+    height: 24px;
+    background-image: url("./phone.ico");
+    filter: hue-rotate(60deg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.CardItem .email {
+    text-decoration-line: underline;
+    position: relative;
+    padding-left: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.CardItem .email::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 0px;
+    width: 24px;
+    height: 24px;
+    background-image: url("./mail.ico");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+a {
+    color: #868b8f;
+}
+
+.CardFilter {
+    width: 1200px;
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+.CardFilter input {
+    width: 1200px;
+    height: 50px;
+    border-radius: 50px;
+    border: 0.1px solid #e3eef0;
+    outline: none;
+    font-size: 1.2em;
+    padding-left: 20px;
+    color: black;
+}
+.CardFilter::after {
+    content: "";
+    position: absolute;
+    top: 11px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    background-image: url("./search.ico");
+    background-repeat: no-repeat;
+    background-size: contain;
 }
